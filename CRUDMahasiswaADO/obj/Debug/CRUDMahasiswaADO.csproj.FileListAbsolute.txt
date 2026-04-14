@@ -1,0 +1,11 @@
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe.config
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.pdb
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.Form1.resources
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.exe
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.pdb
+C:\Users\Lenovo\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.exe.config
