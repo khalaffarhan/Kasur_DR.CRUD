@@ -232,4 +232,41 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        
+        // Klik baris DataGridView → isi form
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                txtNIM.Text = row.Cells["NIM"].Value.ToString();
+                txtNama.Text = row.Cells["Nama"].Value.ToString();
+                cmbJK.Text = row.Cells["JenisKelamin"].Value.ToString();
+                dtpTanggalLahir.Value = Convert.ToDateTime(row.Cells["TanggalLahir"].Value);
+                txtAlamat.Text = row.Cells["Alamat"].Value.ToString();
+                txtKodeProdi.Text = row.Cells["KodeProdi"].Value.ToString();
+            }
+        }
+
+        // Clear Form
+        private void ClearForm()
+        {
+            txtNIM.Clear();
+            txtNama.Clear();
+            cmbJK.SelectedIndex = -1;
+            txtAlamat.Clear();
+            txtKodeProdi.Clear();
+            dtpTanggalLahir.Value = DateTime.Now;
+            txtNIM.Focus();
+        }
+
+        private void txtKodeProdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+    }
+}
