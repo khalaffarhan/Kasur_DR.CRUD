@@ -28,4 +28,16 @@ namespace CRUDMahasiswaADO
         private BindingSource bindingSource = new BindingSource();
         private DataTable dtMahasiswa = new DataTable();
 
-      
+        public Form1()
+        {
+            InitializeComponent();
+            conn = new SqlConnection(connectionString);
+        }
+
+        private void SimpanLog(string message)
+        {
+            dbLogic.InsertLog(message);
+        }
+
+        // Form Load
+       
