@@ -87,3 +87,41 @@ namespace CRUDMahasiswaADO
 
             return dtMahasiswa;
         }
+
+        public void InsertMhs(string nim, string nama, string alamat, string jenisKelamin, DateTime tanggalLahir, string kodeProdi, byte[] foto)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlTransaction trans = conn.BeginTransaction();
+
+            try
+            {
+                SqlCommand command = new SqlCommand("sp_InsertMahasiswa", conn);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Transaction = trans; // <-- WAJIB: command harus terdaftar ke transaksi yang sama
+
+                command.Parameters.AddWithValue("@PNIM", nim);
+                command.Parameters.AddWithValue("@PNama", nama);
+                command.Parameters.AddWithValue("@PAlamat", alamat);
+                command.Parameters.AddWithValue("@PTanggalLahir", tanggalLahir);
+                command.Parameters.AddWithValue("@PJenisKelamin", jenisKelamin);
+                command.Parameters.AddWithValue("@PKodeProdi", kodeProdi);
+                SqlParameter paramFoto = command.Parameters.Add("@PFoto", SqlDbType.VarBinary, -1);
+                paramFoto.Value = (object)foto ?? DBNull.Value;
+
+                command.ExecuteNonQuery();
+                trans.Commit();
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                throw; // <-- lempar ulang agar Form1.cs tahu insert gagal dan TIDAK menampilkan pesan "berhasil"
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
